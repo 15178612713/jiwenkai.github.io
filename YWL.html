@@ -1,1 +1,145 @@
 
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="gbk">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>二维码表白神器</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+	<link href="css/main.css" rel="stylesheet"/>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6f031fcaa74bc26c173f9a1af55d013a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	<style type="text/css">
+		 /* code for animated blinking cursor */
+	        .typed-cursor{
+	            opacity: 1;
+	            font-weight: 100;
+	            -webkit-animation: blink 0.7s infinite;
+	            -moz-animation: blink 0.7s infinite;
+	            -ms-animation: blink 0.7s infinite;
+	            -o-animation: blink 0.7s infinite;
+	            animation: blink 0.7s infinite;
+	        }
+	        @-keyframes blink{
+	            0% { opacity:1; }
+	            50% { opacity:0; }
+	            100% { opacity:1; }
+	        }
+	        @-webkit-keyframes blink{
+	            0% { opacity:1; }
+	            50% { opacity:0; }
+	            100% { opacity:1; }
+	        }
+	        @-moz-keyframes blink{
+	            0% { opacity:1; }
+	            50% { opacity:0; }
+	            100% { opacity:1; }
+	        }
+	        @-ms-keyframes blink{
+	            0% { opacity:1; }
+	            50% { opacity:0; }
+	            100% { opacity:1; }
+	        }
+	        @-o-keyframes blink{
+	            0% { opacity:1; }
+	            50% { opacity:0; }
+	            100% { opacity:1; }
+	        }
+
+	        .typed-fade-out{
+	            opacity: 0;
+	            animation: 0;
+	            transition: opacity .25s;
+	        }
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1> 一段打不完的话 <span>终于给他打完了</span></h1>
+			
+		</header>
+		<div class="wrap">
+	        <h1 class="h1">那谁</h1>
+
+	        <div class="type-wrap">
+	            <div id="typed-strings">
+	                <p></p>
+	                <p>咳咳...</p>
+	                <span>你是猪吗</span>
+	                <p>既然你诚心诚意的问</p>
+	                <p>那我就大发慈悲的告诉你</p>
+	                <p>那啥，你是一个猪</p>
+	                <p>MMP的</p>
+	                <p>怎么还打不完啊</p>
+	                 <p>这玩意这么长吗</p>
+	                <p>你</p>
+	                <p>是</p>
+	                <p>笨</p>
+	                <p>蛋！</p>
+
+	            </div>
+	            <span id="typed" style="white-space:pre;"></span>
+	        </div>
+	    </div>
+		
+	</div>
+	<audio id="audio" src="1.mp3" style="opacity:0" preload="auto" controls loop hidden="true"/>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+				function audioAutoPlay() {
+					var bgmusic = document.getElementById('audio');
+					bgmusic.play();
+					//侦听微信ready事件。
+					document.addEventListener("WeixinJSBridgeReady", function() {
+						bgmusic.play();
+					}, false);
+				}
+				audioAutoPlay();
+			});
+
+    var myAuto = document.getElementById('audio');  
+    myAuto.play();  
+    </script>
+	<script src="js/typed.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function(){
+
+	        Typed.new("#typed", {
+	            stringsElement: document.getElementById('typed-strings'),
+	            typeSpeed: 110,
+	            backDelay: 1000,
+	            loop: false,
+	            contentType: 'html', // or text
+	            // defaults to null for infinite loop
+	            loopCount: null,
+	            callback: function(){ foo(); },
+	            resetCallback: function() { newTyped(); }
+	        });
+
+	        var resetElement = document.querySelector('.reset');
+	        if(resetElement) {
+	            resetElement.addEventListener('click', function() {
+	                document.getElementById('typed')._typed.reset();
+	            });
+	        }
+
+	    });
+
+	    function newTyped(){ /* A new typed object */ }
+
+	    function foo(){ console.log("Callback"); }
+	</script>
+</body>
+</html>
