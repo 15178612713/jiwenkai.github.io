@@ -93,7 +93,19 @@ var _hmt = _hmt || [];
 	<img id="lunbotu" src="img/1.jpg" width="100%" height="100%"/>	
 	</div>
 	<audio id="audio" src="123.mp3" style="opacity:0" preload="auto" controls loop hidden="true"/>
-
+		<script>
+		function init(){
+			setInterval("changeImg()",1000);
+		}
+		var i=1;
+		function changeImg(){
+			i++;
+			document.getElementById("lunbotu").src="img/"+i+".jpg";
+			if(i==3){
+				i=0;
+			}
+		}
+	</script>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
 				function audioAutoPlay() {
@@ -132,19 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	    });
 	    function newTyped(){ /* A new typed object */ }
 	    function foo(){ console.log("Callback"); }
-	</script>
-		<script>
-		function init(){
-			setInterval("changeImg()",1000);
-		}
-		var i=1;
-		function changeImg(){
-			i++;
-			document.getElementById("lunbotu").src="img/"+i+".jpg";
-			if(i==3){
-				i=0;
-			}
-		}
 	</script>	
 </body>
 </html>
